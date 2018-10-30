@@ -1,0 +1,19 @@
+package com.wangzu.filter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ApiWhiteData {
+	private static List<String> whiteApis = new ArrayList<String>();
+	static {
+		whiteApis.add("/json");
+	}
+
+	public static List<String> getWhiteApis() {
+		return whiteApis;
+	}
+
+	public static void add(String uri) {
+		whiteApis.add(uri);
+	}
+}
